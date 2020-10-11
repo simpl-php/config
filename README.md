@@ -51,7 +51,7 @@ $debug = $config->get('DEBUG');
 var_dump($debug); // bool(true)
 ```
 
-If you want more flexibility, you can use `.php` files that return arrays of configuration values.
+If you want more flexibility, you can use `.php` files that return arrays of configuration values. Any `.php` files in the `config` directory will be automatically parsed and loaded into the config object.
 
 ```php
 <?php
