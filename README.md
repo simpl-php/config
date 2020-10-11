@@ -63,13 +63,14 @@ return [
 	'environment' => env('APP_ENV', 'local'),
 ];
 ```
+>Note: The above example makes use of the `env()` helper function to get a value loaded from your `.env` file.
 
-```
+
+Then you can access your config values using dot notation. The first segment of the notation will be the name of the file where it was defined. Example, if you defined the key `environment` in `config/app.php`, you would access it's value in the config as `app.environment`.
+```php
 $environment = $config->get('app.environment');
 var_dump($environment); // string(5) "local"
 ```
-
->The above example makes use of the `env()` helper function to get a value loaded from your `.env` file.
 
 
 ## Testing
