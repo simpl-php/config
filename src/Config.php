@@ -22,8 +22,13 @@ class Config
 	 * @param null $filename
 	 * @param bool $load_config_directory
 	 */
-	public function __construct($directory, $filename = null, $load_config_directory = true)
+	public function __construct($directory = null, $filename = null, $load_config_directory = true)
 	{
+		if (empty($directory)){
+			$backtrace = debug_backtrace();
+			$directory = dirname($backtrace[0]['file']);
+		}
+
 		$this->dotenv = Dotenv::createMutable($directory, $filename);
 		$this->dotenv->load();
 

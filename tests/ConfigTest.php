@@ -21,9 +21,6 @@ class ConfigTest extends TestCase
 		$this->assertEquals('Josh Moody', $this->config->get('app.author'));
 		$this->assertEquals('Foo Bar', $this->config->get('foo.bar'));
 		$this->assertEquals('Bar Baz', $this->config->get('bar.baz'));
-
-		var_dump($this->config->get('DEBUG'));
-		var_dump($this->config->get('app.environment'));
 	}
 
 	public function testConvertsBoolean()
@@ -56,5 +53,11 @@ class ConfigTest extends TestCase
 	{
 		$config = new Config(dirname(__FILE__) . '/resources', null, false);
 		$this->assertTrue($config->get('DEBUG'));
+	}
+
+	public function testCanLoadDefaultDirectory()
+	{
+		$config = new Config();
+		$this->assertTrue($config->get('FROM_DEFAULT_CONFIG_PATH'));
 	}
 }
