@@ -60,4 +60,14 @@ class ConfigTest extends TestCase
 		$config = new Config();
 		$this->assertTrue($config->get('FROM_DEFAULT_CONFIG_PATH'));
 	}
+
+	public function testCanCastToArray()
+	{
+		$config = new Config();
+		$array = $config->toArray();
+
+		$this->assertTrue(is_array($array));
+		$this->assertArrayHasKey('APP_ENV', $array);
+		$this->assertEquals('local', $array['APP_ENV']);
+	}
 }

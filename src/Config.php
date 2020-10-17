@@ -78,4 +78,13 @@ class Config
 	{
 		return $this->data->has($key) ? $this->data->get($key) : $default;
 	}
+
+	/**
+	 * Get the entire configuration as an array.
+	 * @return array|null
+	 */
+	public function toArray()
+	{
+		return $this->data->export();
+	}
 }
