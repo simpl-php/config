@@ -1,6 +1,6 @@
 {
     "name": "simpl/config",
-    "description": "Combines the simplicity of `.env` files with the flexibility defining arrays of config values.",
+    "description": "Combines the simplicity of `.env` files with the flexibility of defining arrays of config values.",
     "license": "MIT",
     "homepage": "https://github.com/simple-php/config",
     "authors": [
