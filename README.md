@@ -1,7 +1,5 @@
 # Simple/Config
 
-[![Build Status](https://img.shields.io/travis/simpl-php/config.svg?style=flat-square)](https://travis-ci.org/simpl-php/config)
-
 Simple configuration provider based on [PHP dotenv](https://github.com/vlucas/phpdotenv)
 
 Combines the simplicity of `.env` files with the flexibility of defining arrays of config values.
