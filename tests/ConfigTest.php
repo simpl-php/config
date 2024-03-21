@@ -11,7 +11,7 @@ class ConfigTest extends TestCase
 	 */
 	public $config;
 
-	public function setUp()
+	public function setUp() : void
 	{
 		$this->config = new Config(dirname(__FILE__) . '/resources');
 	}
