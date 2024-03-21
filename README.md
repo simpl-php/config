@@ -2,6 +2,8 @@
 
 Simple configuration provider based on [PHP dotenv](https://github.com/vlucas/phpdotenv)
 
+[![PHP CI](https://github.com/simpl-php/config/actions/workflows/php.yml/badge.svg?branch=master)](https://github.com/simpl-php/config/actions/workflows/php.yml)
+
 Combines the simplicity of `.env` files with the flexibility of defining arrays of config values.
 
 ## Installation
